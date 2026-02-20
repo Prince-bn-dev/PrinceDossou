@@ -15,6 +15,7 @@ function App() {
                 color: "#f0f0f0",
                 padding: "60px",
                 fontFamily: "sans-serif",
+                textAlign: "center",
               }}
             >
               404 Not Found
