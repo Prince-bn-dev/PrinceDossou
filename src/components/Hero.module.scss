@@ -18,8 +18,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(168, 224, 99, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 224, 99, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(168, 224, 99, 0.184) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 224, 99, 0.292) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(
     ellipse 80% 80% at 50% 50%,
@@ -137,14 +137,14 @@
   display: block;
   font-size: clamp(3rem, 7vw, 6rem);
   font-weight: 800;
-  color: $text-primary;
+  color: var(--text-primary);
 }
 
 .line2 {
   display: block;
   font-size: clamp(3rem, 7vw, 6rem);
   font-weight: 400;
-  color: $text-secondary;
+  color: var(--text-secondary);
 }
 
 .accent {
@@ -154,7 +154,7 @@
 .role {
   font-family: $font-mono;
   font-size: 0.9rem;
-  color: $text-secondary;
+  color: var(--text-secondary);
   letter-spacing: 0.02em;
 }
 
@@ -165,12 +165,12 @@
 
 .description {
   font-size: 1rem;
-  color: $text-secondary;
+  color: var(--text-secondary);
   line-height: 1.8;
   max-width: 480px;
 
   strong {
-    color: $text-primary;
+    color: var(--text-primary);
     font-weight: 500;
   }
 }
@@ -192,7 +192,7 @@
   text-transform: uppercase;
   padding: 14px 28px;
   background: $accent-green;
-  color: $bg-primary;
+  color: var(--bg-primary);
   clip-path: polygon(0 0, 100% 0, 100% 70%, 95% 100%, 0 100%);
   transition: all 0.3s ease;
 
@@ -211,8 +211,8 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 14px 28px;
-  border: 1px solid $border;
-  color: $text-secondary;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
   transition: all 0.3s ease;
 
   &:hover {
@@ -244,7 +244,7 @@
 
 .statLabel {
   font-size: 0.75rem;
-  color: $text-muted;
+  color: var(--text-muted);
   font-family: $font-mono;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -253,7 +253,7 @@
 .divider {
   width: 1px;
   height: 40px;
-  background: $border;
+  background: var(--border);
 }
 
 /* === RIGHT SIDE / IMAGE === */
@@ -283,7 +283,7 @@
   height: 100%;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
-  background: $bg-card;
+  background: var(--bg-card);
 }
 
 .photo {
@@ -334,8 +334,8 @@
   font-size: 0.7rem;
   font-weight: 500;
   padding: 6px 12px;
-  background: $bg-card;
-  border: 1px solid $border;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   color: $accent-green;
   white-space: nowrap;
   animation: float 4s ease-in-out infinite;
@@ -379,7 +379,7 @@
   gap: 12px;
   font-family: $font-mono;
   font-size: 0.7rem;
-  color: $text-muted;
+  color: var(--text-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   writing-mode: vertical-rl;

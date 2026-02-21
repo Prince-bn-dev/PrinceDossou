@@ -49,7 +49,7 @@
   font-family: $font-display;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: $text-primary;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   position: relative;
 
@@ -82,12 +82,12 @@
   gap: 20px;
 
   p {
-    color: $text-secondary;
+    color: var(--text-secondary);
     line-height: 1.8;
     font-size: 0.95rem;
 
     strong {
-      color: $text-primary;
+      color: var(--text-primary);
       font-weight: 500;
     }
   }
@@ -95,7 +95,7 @@
 
 .lead {
   font-size: 1.1rem !important;
-  color: $text-primary !important;
+  color: var(--text-primary) !important;
 }
 
 .highlight {
@@ -108,7 +108,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding-top: 16px;
-  border-top: 1px solid $border;
+  border-top: 1px solid var(--border);
   margin-top: 8px;
 }
 
@@ -123,12 +123,12 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: $text-muted;
+  color: var(--text-muted);
 }
 
 .infoValue {
   font-size: 0.85rem;
-  color: $text-primary;
+  color: var(--text-primary);
   transition: color 0.2s;
 
   &:hover {
@@ -150,7 +150,7 @@
 .blockTitle {
   font-family: $font-mono;
   font-size: 0.85rem;
-  color: $text-secondary;
+  color: var(--text-secondary);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -165,8 +165,8 @@
   display: flex;
   gap: 20px;
   padding: 24px;
-  background: $bg-card;
-  border: 1px solid $border;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-left: 3px solid $accent-green;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 97% 100%, 0 100%);
 }
@@ -184,17 +184,17 @@
     font-family: $font-display;
     font-size: 1rem;
     font-weight: 700;
-    color: $text-primary;
+    color: var(--text-primary);
     margin-bottom: 4px;
   }
   p {
     font-size: 0.85rem;
-    color: $text-secondary;
+    color: var(--text-secondary);
   }
   span {
     font-family: $font-mono;
     font-size: 0.75rem;
-    color: $text-muted;
+    color: var(--text-muted);
   }
 }
 
@@ -215,7 +215,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
-  color: $text-primary;
+  color: var(--text-primary);
 }
 
 .langPct {
@@ -226,7 +226,7 @@
 
 .langBar {
   height: 3px;
-  background: $border;
+  background: var(--border);
   position: relative;
   overflow: visible;
 }

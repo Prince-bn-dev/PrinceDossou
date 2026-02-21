@@ -2,7 +2,7 @@
 
 .skills {
   padding: $section-padding;
-  background: $bg-secondary;
+  background: var(--bg-secondary);
   position: relative;
 
   &::after {
@@ -50,7 +50,7 @@
   font-family: $font-display;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: $text-primary;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   position: relative;
 
@@ -106,7 +106,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: $text-primary;
+  color: var(--text-primary);
 }
 
 .tags {
@@ -119,9 +119,9 @@
   font-family: $font-mono;
   font-size: 0.75rem;
   padding: 6px 14px;
-  background: $bg-card;
-  border: 1px solid $border;
-  color: $text-secondary;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
   letter-spacing: 0.03em;
   cursor: default;
   transition: all 0.25s ease;
@@ -145,7 +145,7 @@
 .levelsTitle {
   font-family: $font-mono;
   font-size: 0.85rem;
-  color: $text-secondary;
+  color: var(--text-secondary);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -171,7 +171,7 @@
 
 .skillName {
   font-size: 0.85rem;
-  color: $text-primary;
+  color: var(--text-primary);
 }
 
 .skillLevel {

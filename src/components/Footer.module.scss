@@ -16,7 +16,7 @@
 
 .line {
   height: 1px;
-  background: $border;
+  background: var(--border);
   margin-bottom: 30px;
 }
 
@@ -34,10 +34,10 @@
 
 .copy {
   font-size: 0.8rem;
-  color: $text-muted;
+  color: var(--text-muted);
 
   strong {
-    color: $text-secondary;
+    color: var(--text-secondary);
     font-weight: 500;
   }
 }
@@ -45,6 +45,6 @@
 .built {
   font-family: $font-mono;
   font-size: 0.75rem;
-  color: $text-muted;
+  color: var(--text-muted);
   letter-spacing: 0.05em;
 }

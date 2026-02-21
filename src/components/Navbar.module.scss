@@ -14,9 +14,9 @@
 
   &.scrolled {
     padding: 18px 60px;
-    background: rgba(10, 10, 15, 0.92);
+    background: rgba(var(--bg-primary-rgb), 0.92);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid var(--border);
   }
 
   @media (max-width: $mobile) {
@@ -24,6 +24,7 @@
   }
 }
 
+// ── Logo ──────────────────────────────────────────────────────
 .logo {
   display: flex;
   align-items: center;
@@ -43,14 +44,16 @@
   font-size: 1.1rem;
   font-weight: 800;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
+  flex-shrink: 0;
 }
 
 .logoText {
   font-size: 1.1rem;
-  color: $text-primary;
+  color: var(--text-primary);
   letter-spacing: 0.05em;
 }
 
+// ── Nav links ─────────────────────────────────────────────────
 .links {
   display: flex;
   align-items: center;
@@ -61,7 +64,7 @@
     font-family: $font-body;
     font-size: 0.85rem;
     font-weight: 500;
-    color: $text-secondary;
+    color: var(--text-secondary);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     transition: color 0.3s ease;
@@ -69,6 +72,7 @@
     align-items: center;
     gap: 6px;
     position: relative;
+    text-decoration: none;
 
     &::after {
       content: "";
@@ -98,10 +102,10 @@
     bottom: 0;
     width: 70vw;
     height: 100vh;
-    background: $bg-card;
+    background: var(--bg-card);
     padding: 100px 40px;
     gap: 30px;
-    border-left: 1px solid $border;
+    border-left: 1px solid var(--border);
 
     &.open {
       display: flex;
@@ -120,6 +124,80 @@
   opacity: 0.7;
 }
 
+// ── Right actions ─────────────────────────────────────────────
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+// ── Theme toggle ──────────────────────────────────────────────
+.themeToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  outline: none;
+
+  &:focus-visible {
+    outline: 1px solid $accent-green;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+.themeIcon {
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--text-secondary);
+  width: 20px;
+  text-align: center;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+// Piste
+.themeTrack {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+
+  .themeToggle:hover & {
+    border-color: $accent-green;
+    background: rgba(168, 224, 99, 0.08);
+  }
+}
+
+// Bouton glissant
+.themeThumb {
+  position: absolute;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: $accent-green;
+  box-shadow: 0 0 8px rgba(168, 224, 99, 0.6);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.thumbDark {
+    transform: translateX(4px);
+  }
+  // light → thumb à droite
+  &.thumbLight {
+    transform: translateX(-18px);
+  }
+}
+
+// ── CTA button ────────────────────────────────────────────────
 .ctaBtn {
   font-family: $font-display;
   font-size: 0.8rem;
@@ -131,6 +209,7 @@
   color: $accent-green;
   transition: all 0.3s ease;
   clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+  text-decoration: none;
 
   &:hover {
     background: $accent-green;
@@ -142,6 +221,7 @@
   }
 }
 
+// ── Burger ────────────────────────────────────────────────────
 .burger {
   display: none;
   flex-direction: column;
@@ -155,7 +235,7 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: $text-primary;
+    background: var(--text-primary);
     transition: all 0.3s ease;
     transform-origin: center;
   }

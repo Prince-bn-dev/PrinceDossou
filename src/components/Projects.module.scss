@@ -32,7 +32,7 @@
   font-family: $font-display;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: $text-primary;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   position: relative;
 
@@ -64,8 +64,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background: $bg-card;
-  border: 1px solid $border;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   overflow: hidden;
   transition:
     transform 0.35s ease,
@@ -103,7 +103,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: $bg-secondary;
+  background: var(--bg-secondary);
   flex-shrink: 0;
 }
 
@@ -195,7 +195,7 @@
 }
 
 .cardArrow {
-  color: $text-muted;
+  color: var(--text-muted);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -206,14 +206,14 @@
   font-family: $font-display;
   font-size: 1.3rem;
   font-weight: 800;
-  color: $text-primary;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
 .cardDesc {
   font-size: 0.875rem;
-  color: $text-secondary;
+  color: var(--text-secondary);
   line-height: 1.7;
   flex: 1;
 }
@@ -229,8 +229,8 @@
   font-family: $font-mono;
   font-size: 0.68rem;
   padding: 4px 10px;
-  border: 1px solid $border;
-  color: white;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
   letter-spacing: 0.05em;
   background: rgba(255, 255, 255, 0.02);
 }
